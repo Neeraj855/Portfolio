@@ -1,22 +1,35 @@
-import React,{Component} from 'react';
+import React, { Component } from 'react';
 
+import Header from '../Common/Header';
+import Services from '../Common/Services/Services';
+import Portfolio from '../Common/Portfolio/Portfolio';
+import Timeline from "../Common/Timeline/Timeline";
+import Team from "../Common/Team/Team";
+
+
+import image from "../assets/img/background/header-bg.jpg";
 
 class Home extends Component {
 
-    render() { 
-        return (  
+    render() {
+        return (
             <div>
-                {/*  Masthead */}
-                <header className="masthead">
-                    <div className="container">
-                        <div className="masthead-subheading">Welcome To Our Studio!</div>
-                        <div className="masthead-heading text-uppercase">It's Nice To Meet You</div>
-                        <a className="btn btn-primary btn-xl text-uppercase js-scroll-trigger" href="#services">Tell Me More</a>
-                    </div>
-                </header>
+                <Header
+                    title="Welcome To Our Studio!"
+                    subTitle="It's Nice To Meet You"
+                    buttonText="Tell Me More"
+                    link="/services"
+                    showButton={true}
+                    image={image}
+                />
+                <Services />
+                <Portfolio />
+                <Timeline />
+                <Team />
+
             </div>
         );
     }
 }
- 
+
 export default Home;
